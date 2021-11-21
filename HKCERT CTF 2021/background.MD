@@ -3,6 +3,7 @@ hidden: true  # Remove after edit
 title: "HKCERT CTF 2021 Writeup"
 categories: ctf
 tags: ctf writeup
+date: 2021-11-22
 
 ctf_time: Fri, 12 Nov. 2021, 18:00 HKT — Sun, 14 Nov. 2021, 18:00 HKT
 ctf_type: On-line
