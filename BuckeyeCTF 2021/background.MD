@@ -9,6 +9,8 @@ ctftime_url: https://ctftime.org/event/1434
 # Background
 CTFTime URL: [{{ page.ctftime_url }}]({ page.ctftime_url }})
 
+Sat, 23 Oct. 2021, 08:00 HKT --- Mon, 25 Oct. 2021, 08:00 HKT
+
 **On-line**
 
 A [BuckeyeCTF](https://ctftime.org/ctf/667) event.

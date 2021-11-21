@@ -9,7 +9,7 @@ ctftime_url: https://ctftime.org/event/1473 # https://euangoddard.github.io/clip
 # Background
 CTFTime URL: [{{ page.ctftime_url }}]({ page.ctftime_url }})
 
-Tue, 19 Oct. 2021, 22:00 HKT --- Wed, 20 Oct. 2021, 22:00 HKT [![](https://ctftime.org/static/img/icon_cal.svg)](https://ctftime.org/event/1473.ics)
+Tue, 19 Oct. 2021, 22:00 HKT --- Wed, 20 Oct. 2021, 22:00 HKT 
 
 **On-line**
 

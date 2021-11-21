@@ -9,7 +9,7 @@ ctftime_url: https://ctftime.org/event/1482 # https://euangoddard.github.io/clip
 # Background
 CTFTime URL: [{{ page.ctftime_url }}]({ page.ctftime_url }})
 
-Fri, 29 Oct. 2021, 22:00 HKT --- Mon, 01 Nov. 2021, 08:00 HKT [![](https://ctftime.org/static/img/icon_cal.svg)](https://ctftime.org/event/1482.ics)
+Fri, 29 Oct. 2021, 22:00 HKT --- Mon, 01 Nov. 2021, 08:00 HKT
 
 **On-line**
 
