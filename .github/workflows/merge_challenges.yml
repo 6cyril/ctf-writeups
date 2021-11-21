@@ -1,0 +1,62 @@
+name: Turn Flags.tsv to markdown files
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+    - 'master'
+
+jobs:
+  job_1:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+ 
+    - name: Set conditional variables
+      run: |
+        # Action based on changes of latest commit 
+        git diff-tree --no-commit-id --name-only -r $GITHUB_SHA > files
+        echo "cntTARGET=$(find . -name flags.tsv -printf '%h\n' | wc -l)" >> $GITHUB_ENV
+        echo "cntWORKFLOW=$(cat files | grep -P "^\.github/workflows/.*\.yml$" | wc -l)" >> $GITHUB_ENV
+        echo "oriPWD=$PWD" >> $GITHUB_ENV
+        
+    - name: If Workflow file is changed
+      if: ${{ env.cntWORKFLOW > 0 }}
+      run: |
+        echo Workflow changed
+        python3 -V
+        python -V
+        
+    - name: Generate targets.txt
+      if: ${{ env.cntTARGET > 0 }}
+      run: find . -name flags.tsv -printf '%h\n'  > targets.txt
+
+    - name: Merge new writeup 
+      if: ${{ env.cntTARGET > 0 }}
+      run: >-
+        while read i; 
+        do cd "${{ env.oriPWD }}/$i" 
+        && python3 "${{ env.oriPWD }}/script.py" 
+        && mv flags.tsv flags.tsv.bak
+        ; done < targets.txt
+          
+    - name: Clean up
+      if: ${{ env.cntTARGET > 0 }}
+      run: |
+        rm targets.txt
+        rm files
+        
+    - name: Push Changes to Remote
+      if: ${{ env.cntTARGET > 0 }}
+      continue-on-error: true
+      run: |
+        git config --global user.name "Github Workflow Bot"
+        git config --global user.email "6cyril@users.noreply.github.com"
+        git config --global push.default current
+        git add -A
+        git status
+        git commit -m "Upload by workflow - ${{ github.workflow }} Run ID: ${{github.run_id}}"
+        git push 
