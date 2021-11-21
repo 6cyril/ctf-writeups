@@ -1,0 +1,17 @@
+Num	Question	Type	Points	Flag	Challenge	Solution
+1	At least a bit significant challenge	Forensics	100		Placeholder  \nLine 1  \nLine2  \nLine3  \n	Placeholder  \nLine 1  \nLine2  \nLine3  \n
+2	A Castle's Flag	Forensics	100	flag{th3_h1dd3n_fl4g_1ns1d3_th3_c4stl3}	Placeholder  \nLine 1  \nLine2  \nLine3  \n	Placeholder  \nLine 1  \nLine2  \nLine3  \n
+3	Chatting with you all	Misc	100	flag{th4nk_Y0u_f0r_j01n1ng_th3_c0mp3t1t10n}	Placeholder  \nLine 1  \nLine2  \nLine3  \n	Placeholder  \nLine 1  \nLine2  \nLine3  \n
+4	Home Sweet Home	Web	100	flag{127.0.0.1_sweet_127.0.0.1}	Placeholder  \nLine 1  \nLine2  \nLine3  \n	Placeholder  \nLine 1  \nLine2  \nLine3  \n
+5	Terminal System	Pwn	100		Placeholder  \nLine 1  \nLine2  \nLine3  \n	Placeholder  \nLine 1  \nLine2  \nLine3  \n
+6	Attacker	Network	100		Placeholder  \nLine 1  \nLine2  \nLine3  \n	Placeholder  \nLine 1  \nLine2  \nLine3  \n
+7	Where to eat?	OSINT	100	flag{2415-534_22}	Placeholder  \nLine 1  \nLine2  \nLine3  \n	Placeholder  \nLine 1  \nLine2  \nLine3  \n
+8	My Vulnerability Portal	Web	100	flag{SQL_1nj3ct10n_w3b_vuln3r4b1l1ty}	Placeholder  \nLine 1  \nLine2  \nLine3  \n	Placeholder  \nLine 1  \nLine2  \nLine3  \n
+9	The Portal	Pwn	154		Placeholder  \nLine 1  \nLine2  \nLine3  \n	Placeholder  \nLine 1  \nLine2  \nLine3  \n
+10	Hotel	OSINT	100		Placeholder  \nLine 1  \nLine2  \nLine3  \n	Placeholder  \nLine 1  \nLine2  \nLine3  \n
+11	Friends forever	OSINT	584		Placeholder  \nLine 1  \nLine2  \nLine3  \n	Placeholder  \nLine 1  \nLine2  \nLine3  \n
+12	A Statue on the Wrong Place	OSINT	802		Placeholder  \nLine 1  \nLine2  \nLine3  \n	Placeholder  \nLine 1  \nLine2  \nLine3  \n
+13	Find IP(v6)	Network	380		Placeholder  \nLine 1  \nLine2  \nLine3  \n	Placeholder  \nLine 1  \nLine2  \nLine3  \n
+14	Feedback is always welcome	Misc	100		Placeholder  \nLine 1  \nLine2  \nLine3  \n	Placeholder  \nLine 1  \nLine2  \nLine3  \n
+15	Return that ROPe	Pwn	596		Placeholder  \nLine 1  \nLine2  \nLine3  \n	Placeholder  \nLine 1  \nLine2  \nLine3  \n
+16	Chirp	Forensics	335	flag{4Udi0_f0r3n.s1cs_1s_p41n}	Placeholder  \nLine 1  \nLine2  \nLine3  \n	Placeholder  \nLine 1  \nLine2  \nLine3  \n
