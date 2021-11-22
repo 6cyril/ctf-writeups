@@ -1,2 +1,4 @@
 *.xz filter=lfs diff=lfs merge=lfs -text
 timebomb_20799fed87d97c7a9b7fcd00af5a21e8.zip filter=lfs diff=lfs merge=lfs -text
+the-wave-of-us_ed82d2616c9d118d8dc8637022902330.zip filter=lfs diff=lfs merge=lfs -text
+jack-botnet-service-1_064a2bd6bb9036f6e8788d8418e18300.zip filter=lfs diff=lfs merge=lfs -text
