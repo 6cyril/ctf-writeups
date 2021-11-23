@@ -1,4 +1,4 @@
-name: Turn Flags.tsv to markdown files
+name: Merge Writeup
 
 on:
   workflow_dispatch:
@@ -18,8 +18,8 @@ jobs:
     - name: Set conditional variables
       run: |
         # Action based on changes of latest commit 
-        git diff-tree --no-commit-id --name-only -r $GITHUB_SHA > files
-        echo "cntTARGET=$(find . -name flags.tsv -printf '%h\n' | wc -l)" >> $GITHUB_ENV
+        # git diff-tree --no-commit-id --name-only -r $GITHUB_SHA > files
+        echo "cntTARGET=$(find . -name build -printf '%h\n' | wc -l)" >> $GITHUB_ENV
         echo "cntWORKFLOW=$(cat files | grep -P "^\.github/workflows/.*\.yml$" | wc -l)" >> $GITHUB_ENV
         echo "oriPWD=$PWD" >> $GITHUB_ENV
         
@@ -27,28 +27,27 @@ jobs:
       if: ${{ env.cntWORKFLOW > 0 }}
       run: |
         echo Workflow changed
-        python3 -V
-        python -V
+        echo $oriPWD
         
     - name: Generate targets.txt
       if: ${{ env.cntTARGET > 0 }}
-      run: find . -name flags.tsv -printf '%h\n'  > targets.txt
+      run: find . -name build -printf '%h\n'  > targets.txt
 
     - name: Merge new writeup 
       if: ${{ env.cntTARGET > 0 }}
       run: >-
         while read i; 
         do cd "${{ env.oriPWD }}/$i" 
-        && python3 "${{ env.oriPWD }}/script.py" 
-        && mv flags.tsv flags.tsv.bak
+        && cp background.MD README.MD 
+        && cat *.md >> README.MD
+        && rm build
         ; done < targets.txt
           
     - name: Clean up
       if: ${{ env.cntTARGET > 0 }}
       run: |
         rm targets.txt
-        rm files
-        
+
     - name: Push Changes to Remote
       if: ${{ env.cntTARGET > 0 }}
       continue-on-error: true
