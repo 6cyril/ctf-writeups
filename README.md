@@ -1,8 +1,9 @@
 # ctf-writeups
-Writeups/exploit code for CTFs I've done
+Writeups/exploit code for CTFs I've done. They will be summarised into a post on <https://www.clesc.hk> when ready.
 
 ## File Structure
 This is a place to keep notes of challenges solved by me or my teammates. Even though I may not prepare write-up for all solves, this repo is where I could keep a record.
+
 ```
 .  
 ├── .github  
